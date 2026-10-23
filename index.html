@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#100d1d" />
+    <meta
+      name="description"
+      content=""
+    />
+    <title>Для Саши</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="story-shell">
+      <section class="screen screen--question is-active" id="question-screen" aria-labelledby="question-title">
+        <div class="question-card">
+          <p class="question-eyebrow">Вопрос для влёта в хату</p>
+          <p class="question-prompt">Какой самый часто задаваемый вопрос во время клатча в Valorant?</p>
+          <form class="password-form question-form" id="question-form">
+            <label class="visually-hidden" for="question-answer">Твой ответ</label>
+            <div class="password-field question-field">
+              <input
+                id="question-answer"
+                name="answer"
+                type="text"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+                placeholder="Напиши ответ"
+                required
+              />
+            </div>
+            <p class="form-error question-error" id="question-error" role="alert" aria-live="polite"></p>
+            <button class="button button--primary gate-submit" type="submit">
+              <span>Ответить</span><span aria-hidden="true">♡</span>
+            </button>
+          </form>
+        </div>
+        <span class="question-heart question-heart--one" aria-hidden="true">♡</span>
+        <span class="question-heart question-heart--two" aria-hidden="true">♥</span>
+        <span class="question-heart question-heart--three" aria-hidden="true">✦</span>
+      </section>
+
+      <section class="screen screen--gate" id="gate" aria-labelledby="gate-title" hidden>
+        <div class="gate-content">
+          <h1 id="gate-title">Для любимой<br /><em>Сашки ЙОПТО</em></h1>
+          <figure class="penguin-card">
+            <span class="photo-spark photo-spark--one" aria-hidden="true">✦</span>
+            <span class="photo-spark photo-spark--two" aria-hidden="true">✧</span>
+            <img
+              class="penguin-picture"
+              src="penguin-love.png"
+              alt="Пингвин в очках держит большое красное сердце"
+            />
+            <span class="photo-sticker" aria-hidden="true">♡</span>
+            <div class="lock-stage" id="lock-stage" aria-hidden="true">
+              <svg class="love-lock" viewBox="0 0 320 270">
+                <defs>
+                  <linearGradient id="lock-gradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ff7898" />
+                    <stop offset="1" stop-color="#d84270" />
+                  </linearGradient>
+                </defs>
+                <path class="lock-shackle" d="M107 111V78a53 53 0 0 1 106 0v33" />
+                <g class="lock-body">
+                  <rect x="71" y="101" width="178" height="136" rx="29" />
+                  <circle cx="160" cy="156" r="12" />
+                  <path d="M154 164h12l7 31h-26Z" />
+                </g>
+                <path class="lock-fragment fragment--one" d="m80 112 59 2-19 64-43-12Z" />
+                <path class="lock-fragment fragment--two" d="m146 106 91 9-14 58-79-4Z" />
+                <path class="lock-fragment fragment--three" d="m126 181 54 6 18 39-85-4Z" />
+                <path class="lock-fragment fragment--four" d="m192 176 42-8 8 60-29 5Z" />
+                <path class="lock-shine" d="M94 126v-2" />
+              </svg>
+              <svg class="love-key" viewBox="0 0 180 100">
+                <circle cx="38" cy="48" r="24" />
+                <circle class="key-hole" cx="38" cy="48" r="10" />
+                <path d="M62 48h91m-21 0v18m-19-18v12" />
+                <path class="key-heart" d="M151 32c-9-12-27-4-21 8 3 7 21 20 21 20s18-13 21-20c6-12-12-20-21-8Z" />
+              </svg>
+              <span class="lock-spark lock-spark--one"></span>
+              <span class="lock-spark lock-spark--two"></span>
+              <span class="lock-spark lock-spark--three"></span>
+              <span class="lock-spark lock-spark--four"></span>
+            </div>
+          </figure>
+          <form class="password-form" id="password-form">
+            <label class="visually-hidden" for="password">Секретный пароль</label>
+            <div class="password-field">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="off"
+                placeholder="Пароль"
+                required
+              />
+            </div>
+            <p class="form-error" id="form-error" role="alert" aria-live="polite"></p>
+            <button class="button button--primary gate-submit" id="gate-submit" type="submit">
+              <span>Открыть</span><span aria-hidden="true">♡</span>
+            </button>
+          </form>
+          <div class="gate-loader" id="gate-loader" role="status" aria-live="polite" hidden>
+            <span class="loader-heart" aria-hidden="true">♥</span>
+            <span>Подбираю ключик…</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen screen--game" id="game" aria-labelledby="game-title" hidden>
+        <div class="ambient ambient--game"></div>
+        <div class="content-card game-card">
+          <p class="eyebrow eyebrow--light">Уровень 01 - Проверка русской смекалочки </p>
+          <h2 id="game-title">Лови <em>нахуй</em><br />сердцевины</h2>
+          <p class="section-copy">Хапай быриком.</p>
+          <div class="game-status" aria-live="polite">
+            <span class="game-status-heart" aria-hidden="true">♥</span>
+            <span>Собрано <strong id="score">0</strong> из <strong id="total-hearts">5</strong></span>
+          </div>
+          <div class="heart-field" id="heart-field" aria-label="Поле с сердечками"></div>
+          <p class="game-hint" id="game-hint"></p>
+          <button class="button button--primary next-button" id="to-reasons" type="button" hidden>
+            <span>НЕКСТ НАХУЙ</span><span aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div class="screen-number">02 <span>/ 03</span></div>
+      </section>
+
+      <section class="screen screen--reasons" id="reasons" aria-labelledby="reasons-title" hidden>
+        <div class="ambient ambient--reasons"></div>
+        <div class="content-card reasons-page">
+          <div class="laughing-doodle" aria-hidden="true">
+            <svg viewBox="0 0 240 190" role="presentation">
+              <path class="doodle-arm" d="M50 129q-25 5-30 30m170-30q25 5 30 30" />
+              <path class="doodle-heart" d="M120 154S75 127 76 101c1-22 29-29 44-9 15-20 43-13 44 9 1 26-44 53-44 53Z" />
+              <circle class="doodle-face" cx="120" cy="77" r="58" />
+              <path class="doodle-eye" d="m91 63 17 11m-17 0 17-11m24 0 17 11m-17 0 17-11" />
+              <path class="doodle-mouth" d="M91 88q29 46 58 0Z" />
+              <path class="doodle-tooth" d="M108 98v13m12-10v16m12-16v13" />
+              <path class="doodle-tear" d="M72 78q-14 13-4 22 10-7 4-22m100 0q14 13 4 22-10-7-4-22" />
+              <path class="doodle-spark" d="m40 45 4 11 11 4-11 4-4 11-4-11-11-4 11-4Zm160 3 3 8 8 3-8 3-3 8-3-8-8-3 8-3Z" />
+            </svg>
+          </div>
+          <p class="eyebrow eyebrow--light"></p>
+          <h2 id="reasons-title">Причины, почему<br /><em>я тебя люблю</em></h2>
+          <p class="section-copy reasons-subtitle">Первые две пока оставим для твоих слов ♡</p>
+
+          <div class="reason-list">
+            <article class="reason-row">
+              <span class="reason-number">01</span>
+              <p>Глаза красивее морских жемчужин!</p>
+              <span class="reason-row-heart" aria-hidden="true">♡</span>
+            </article>
+            <article class="reason-row">
+              <span class="reason-number">02</span>
+              <p>За самые добрые слова в мире^_^</p>
+              <span class="reason-row-heart" aria-hidden="true">♡</span>
+            </article>
+            <article class="reason-row reason-row--locked" id="reason-three-row">
+              <span class="reason-number">03</span>
+              <p id="reason-three-text">За самые розовые и самые сладкие пятки</p>
+              <button class="reason-lock" id="reason-three-lock" type="button" aria-label="Открыть третью причину: нажми 3 раза">
+                <svg viewBox="0 0 32 36" aria-hidden="true">
+                  <path d="M8 15V10a8 8 0 0 1 16 0v5" />
+                  <rect x="4" y="14" width="24" height="19" rx="4" />
+                  <circle cx="16" cy="22" r="2" />
+                  <path d="m15 24 2 5" />
+                </svg>
+              </button>
+              <span class="lock-click-count" id="lock-click-count" aria-live="polite">0/3</span>
+            </article>
+            <button class="reason-row reason-row--button" id="reason-four-button" type="button">
+              <span class="reason-number">04</span>
+              <span>Причина 4</span>
+              <span class="reason-row-heart reason-row-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p class="reasons-hint" id="reasons-hint" aria-live="polite">У третьей причины есть секретный замочек…</p>
+          <button class="button button--quiet back-to-game" id="back-to-game" type="button">← Вернуться к сердечкам</button>
+        </div>
+        <div class="screen-number">03 <span>/ 03</span></div>
+
+        <div class="python-overlay" id="python-overlay" hidden>
+          <section class="heart-showcase" role="dialog" aria-modal="true" aria-label="Сердце из признаний в любви">
+            <button class="heart-close" id="python-close" type="button" aria-label="Закрыть сердце">×</button>
+            <div class="heart-output">
+              <canvas id="love-text-heart" aria-label="Сердце, нарисованное признаниями в любви"></canvas>
+              <p class="heart-center-text">самой любимой</p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <audio id="background-music" src="mayak.mp3" loop preload="metadata"></audio>
+    <button
+      class="music-toggle"
+      id="music-toggle"
+      type="button"
+      aria-pressed="false"
+      aria-label="Включить музыку"
+    >
+      <span aria-hidden="true">♫</span>
+      <span id="music-toggle-label">Нарубить звучку</span>
+    </button>
+    <p class="visually-hidden" id="music-status" aria-live="polite"></p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
